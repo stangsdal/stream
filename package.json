@@ -1,25 +1,33 @@
 {
-	"name"         : "modbus-stream",
-	"version"      : "0.46.0",
-	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
-	"repository"   : "https://github.com/node-modbus/stream",
-	"license"      : "MIT",
-	"keywords"     : [ "modbus", "serial", "rtu", "ascii", "tcp", "stream" ],
-	"main"         : "lib/modbus",
-	"types"        : "types",
-	"scripts"      : {
-		"test"   : "node test/run",
-		"dtslint": "dtslint types"
+	"name": "modbus-stream",
+	"version": "0.46.0",
+	"author": "Diogo Resende <dresende@thinkdigital.pt>",
+	"repository": "https://github.com/zmartifyPKR/stream",
+	"license": "MIT",
+	"keywords": [
+		"modbus",
+		"serial",
+		"rtu",
+		"ascii",
+		"tcp",
+		"stream"
+	],
+	"main": "lib/modbus",
+	"types": "types",
+	"scripts": {
+		"test": "node test/run",
+		"dtslint": "dtslint types",
+		"maketypes": "npx -p typescript tsc lib/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types"
 	},
-	"dependencies" : {
+	"dependencies": {
 		"@types/node": "latest",
-		"modbus-pdu" : "^1.13.0"
+		"modbus-stream": "^0.46.0"
 	},
-	"optionalDependencies" : {
-		"serialport" : ">=1.7.1 <7"
+	"optionalDependencies": {
+		"serialport": ">=12.0.0"
 	},
-	"devDependencies" : {
-		"dtslint"   : "^0.4.2",
-		"mocha"     : "^6.2.0"
+	"devDependencies": {
+		"dtslint": "^3.6.4",
+		"mocha": "^10.2.0"
 	}
 }
